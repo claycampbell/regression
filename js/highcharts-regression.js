@@ -1,11 +1,3 @@
-/* Code extracted from https://github.com/Tom-Alexander/regression-js/
- 
- Modifications of January 5, 2015
-
-	- Add dashStyle ('' by default)
-	
-*/
-
 (function (H) {
     
 
@@ -83,12 +75,7 @@
 
         
     });
-    
-
-    
-    /**
-     * Code extracted from https://github.com/Tom-Alexander/regression-js/
-     */
+  
     function _exponential(data) {
         var sum = [0, 0, 0, 0, 0, 0], n = 0, results = [];
 
@@ -129,7 +116,7 @@
     
     
     /**
-     * Code extracted from https://github.com/Tom-Alexander/regression-js/
+  
      * Human readable formulas: 
      * 
      *              N * Σ(XY) - Σ(X) 
@@ -177,9 +164,7 @@
         return {equation: [gradient, intercept], points: results, string: string};
     }
     
-    /**
-     *  Code extracted from https://github.com/Tom-Alexander/regression-js/
-     */
+    
     function _logarithmic(data) {
         var sum = [0, 0, 0, 0], n = 0, results = [],mean = 0 ;
         
@@ -216,9 +201,7 @@
         return {equation: [A, B], points: results, string: string};
     }
     
-    /**
-     * Code extracted from https://github.com/Tom-Alexander/regression-js/
-     */
+   
     function _power(data) {
         var sum = [0, 0, 0, 0], n = 0, results = [];
 
@@ -314,12 +297,7 @@
         return {equation: equation, points: results, string: string};
     }
     
-    /**
-     * @author: Ignacio Vazquez
-     * Based on 
-     * - http://commons.apache.org/proper/commons-math/download_math.cgi LoesInterpolator.java
-     * - https://gist.github.com/avibryant/1151823
-     */
+
     function _loess (data, bandwidth) {
         var bandwidth = bandwidth || 0.25 ;
         
@@ -415,9 +393,7 @@
     }
     
     
-    /**
-     * Code extracted from https://github.com/Tom-Alexander/regression-js/
-     */
+   
     function  gaussianElimination(a, o) {
         var i = 0, j = 0, k = 0, maxrow = 0, tmp = 0, n = a.length - 1, x = new Array(o);
         for (i = 0; i < n; i++) {
@@ -446,10 +422,7 @@
         return (x);
      }
     
-    /**
-     * @author Ignacio Vazquez 
-     * See http://en.wikipedia.org/wiki/Coefficient_of_determination for theaorical details 
-     */
+   
     function coefficientOfDetermination (data, pred ) {
         
         var i = SSE = SSYY =  mean = 0, N = data.length;
